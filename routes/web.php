@@ -1,10 +1,13 @@
 <?php
 
+use App\Http\Controllers\Hrd\ActivityController;
 use App\Http\Controllers\Hrd\DivisiController;
 use App\Http\Controllers\Hrd\GradeController;
 use App\Http\Controllers\Hrd\JabatanController;
 use App\Http\Controllers\Hrd\LevelController;
 use App\Http\Controllers\Hrd\LokasiController;
+use App\Http\Controllers\Hrd\PegawaiAktifController;
+use App\Http\Controllers\Hrd\PegawaiOutController;
 use App\Http\Controllers\HrdController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -68,4 +71,29 @@ Route::group(['prefix' => 'hrd', 'middleware' => ['isHrd', 'auth', 'PreventBackH
     Route::post('deleteLokasi', [LokasiController::class, 'deleteLokasi'])->name('hrd.deleteLokasi');
 
     Route::get('pegawaiAktif', [HrdController::class, 'pegawaiAktif'])->name('hrd.pegawaiAktif');
+    Route::get('getPegawaiAktif', [PegawaiAktifController::class, 'getPegawaiAktif'])->name('hrd.getPegawaiAktif');
+    Route::get('addPegawaiView', [HrdController::class, 'addPegawaiView'])->name('hrd.addPegawaiView');
+    Route::post('pegawaiGetJabatan', [PegawaiAktifController::class, 'pegawaiGetJabatan'])->name('hrd.pegawaiGetJabatan');
+    Route::post('pegawaiGetGrade', [PegawaiAktifController::class, 'pegawaiGetGrade'])->name('hrd.pegawaiGetGrade');
+    Route::post('addPegawai', [PegawaiAktifController::class, 'addPegawai'])->name('hrd.addPegawai');
+    Route::post('deletePegawai', [PegawaiAktifController::class, 'deletePegawai'])->name('hrd.deletePegawai');
+    Route::post('detailPegawai', [PegawaiAktifController::class, 'detailPegawai'])->name('hrd.detailPegawai');
+    Route::post('keluarPegawai', [PegawaiAktifController::class, 'keluarPegawai'])->name('hrd.keluarPegawai');
+
+    Route::get('pegawaiOut', [HrdController::class, 'pegawaiOut'])->name('hrd.pegawaiOut');
+    Route::get('getPegawaiOut', [PegawaiOutController::class, 'getPegawaiOut'])->name('hrd.getPegawaiOut');
+    Route::post('inPegawai', [PegawaiOutController::class, 'inPegawai'])->name('hrd.inPegawai');
+
+    Route::get('aktivitas', [HrdController::class, 'aktivitas'])->name('hrd.aktivitas');
+    Route::get('getActivity', [ActivityController::class, 'getActivity'])->name('hrd.getActivity');
+    Route::post('addActivity', [ActivityController::class, 'addActivity'])->name('hrd.addActivity');
+    Route::post('deleteActivity', [ActivityController::class, 'deleteActivity'])->name('hrd.deleteActivity');
+    Route::post('detailActivity', [ActivityController::class, 'detailActivity'])->name('hrd.detailActivity');
+    Route::post('updateActivity', [ActivityController::class, 'updateActivity'])->name('hrd.updateActivity');
+
+    Route::get('aktivitasPegawai', [HrdController::class, 'aktivitasPegawai'])->name('hrd.aktivitasPegawai');
+    Route::get('getActivityAll', [ActivityController::class, 'getActivityAll'])->name('hrd.getActivityAll');
+
+    Route::get('rekapAktivitas', [HrdController::class, 'rekapAktivitas'])->name('hrd.rekapAktivitas');
+    Route::get('getRekapActivity', [ActivityController::class, 'getRekapActivity'])->name('hrd.getRekapActivity');
 });

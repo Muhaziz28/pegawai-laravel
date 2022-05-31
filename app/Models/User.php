@@ -68,4 +68,29 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function divisi()
+    {
+        return $this->belongsTo(Divisi::class, 'id_divisi', 'id');
+    }
+
+    public function jabatan()
+    {
+        return $this->belongsTo(Jabatan::class, 'id_jabatan', 'id');
+    }
+
+    public function level()
+    {
+        return $this->belongsTo(Level::class, 'id_level', 'id');
+    }
+
+    public function lokasi()
+    {
+        return $this->belongsTo(Lokasi::class, 'id_lokasi', 'id');
+    }
+
+    public function grade()
+    {
+        return $this->belongsTo(Grade::class, 'id_grade', 'id');
+    }
 }

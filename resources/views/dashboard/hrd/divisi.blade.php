@@ -139,9 +139,7 @@
                 },
                 success: function(data) {
                     if (data.code == 0) {
-                        $.each(data.error, function(prefix, val) {
-                            $(form).find('span.' + prefix + '_error').text(val[0]);
-                        });
+                        toastr.success(data.msg, 'Error!');
                     } else {
                         $(form)[0].reset();
                         // alert(data.msg);

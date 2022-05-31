@@ -284,9 +284,7 @@
                 },
                 success: function(data) {
                     if (data.code == 0) {
-                        $.each(data.error, function(prefix, val) {
-                            $(form).find('span.' + prefix + '_error').text(val[0]);
-                        });
+                        toastr.success(data.msg, 'Error!');
                     } else {
                         $('#jabatan-table').DataTable().ajax.reload(null, false);
                         $('#edit-jabatan-form button[type="submit"]').html('Save');

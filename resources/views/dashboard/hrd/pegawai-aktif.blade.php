@@ -11,16 +11,191 @@
         <h4 class="fw-bold py-3 mb-2">Data Pegawai Aktif</h4>
 
         <div class="row g-4 mb-4">
-            <div class="col-xl-4 col-lg-6 col-md-6">
+            <div class="col-sm-6 col-md-6 col-lg-3">
                 <div class="card">
                     <div class="card-body">
-                        <div class="d-flex justify-content-between mb-2">
-                            <h6 class="fw-normal">Total Jabatan</h6>
-
+                        <div class="d-flex justify-content-between">
+                            <div class="card-info">
+                                <p class="card-text">Total Pegawai Aktif</p>
+                                <div class="d-flex align-items-end mb-2">
+                                    <h4 class="card-title me-2 mb-0">{{ $user }}</h4>
+                                </div>
+                            </div>
+                            <div class="card-icon">
+                                <span class="badge bg-label-success rounded p-2">
+                                    <i class="bx bx-user bx-sm"></i>
+                                </span>
+                            </div>
                         </div>
-                        <div class="d-flex justify-content-between align-items-end">
-                            <div class="role-heading">
-                                <h4 class="mb-1">2313</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-6 col-lg-3">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between">
+                            <div class="card-info">
+                                <p class="card-text">Divisi HRD</p>
+                                <div class="d-flex align-items-end mb-2">
+                                    <h4 class="card-title me-2 mb-0">{{ $hrd }}</h4>
+                                </div>
+                            </div>
+                            <div class="card-icon">
+                                <span class="badge bg-label-primary rounded p-2">
+                                    <i class="bx bx-user-voice bx-sm"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-6 col-lg-3">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between">
+                            <div class="card-info">
+                                <p class="card-text">Divisi Finance</p>
+                                <div class="d-flex align-items-end mb-2">
+                                    <h4 class="card-title me-2 mb-0">{{ $finance }}</h4>
+                                </div>
+                            </div>
+                            <div class="card-icon">
+                                <span class="badge bg-label-info rounded p-2">
+                                    <i class="bx bxs-credit-card bx-sm"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-6 col-lg-3">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between">
+                            <div class="card-info">
+                                <p class="card-text">Divisi Kreatif</p>
+                                <div class="d-flex align-items-end mb-2">
+                                    <h4 class="card-title me-2 mb-0">{{ $kreatif }}</h4>
+                                </div>
+                            </div>
+                            <div class="card-icon">
+                                <span class="badge bg-label-primary rounded p-2">
+                                    <i class="bx bx-desktop bx-sm"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-6 col-lg-3">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between">
+                            <div class="card-info">
+                                <p class="card-text">Divisi Marketing</p>
+                                <div class="d-flex align-items-end mb-2">
+                                    <h4 class="card-title me-2 mb-0">{{ $marketing }}</h4>
+                                </div>
+                            </div>
+                            <div class="card-icon">
+                                <span class="badge bg-label-info rounded p-2">
+                                    <i class="bx bx-store bx-sm"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-6 col-lg-3">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between">
+                            <div class="card-info">
+                                <p class="card-text">Divisi Gudang</p>
+                                <div class="d-flex align-items-end mb-2">
+                                    <h4 class="card-title me-2 mb-0">{{ $gudang }}</h4>
+                                </div>
+                            </div>
+                            <div class="card-icon">
+                                <span class="badge bg-label-danger rounded p-2">
+                                    <i class="bx bx-building-house bx-sm"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-6 col-lg-3">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between">
+                            <div class="card-info">
+                                <p class="card-text">Divisi Produksi</p>
+                                <div class="d-flex align-items-end mb-2">
+                                    <h4 class="card-title me-2 mb-0">{{ $produksi }}</h4>
+                                </div>
+                            </div>
+                            <div class="card-icon">
+                                <span class="badge bg-label-success rounded p-2">
+                                    <i class="bx bxl-product-hunt bx-sm"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-6 col-lg-3">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between">
+                            <div class="card-info">
+                                <p class="card-text">Divisi Umum</p>
+                                <div class="d-flex align-items-end mb-2">
+                                    <h4 class="card-title me-2 mb-0">{{ $umum }}</h4>
+                                </div>
+                            </div>
+                            <div class="card-icon">
+                                <span class="badge bg-label-success rounded p-2">
+                                    <i class="bx bx-user-circle bx-sm"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-6 col-lg-3">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between">
+                            <div class="card-info">
+                                <p class="card-text">HERS</p>
+                                <div class="d-flex align-items-end mb-2">
+                                    <h4 class="card-title me-2 mb-0">{{ $hers }}</h4>
+                                </div>
+                            </div>
+                            <div class="card-icon">
+                                <span class="badge bg-label-primary rounded p-2">
+                                    <i class="bx bx-health bx-sm"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-6 col-lg-3">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between">
+                            <div class="card-info">
+                                <p class="card-text">Rumah</p>
+                                <div class="d-flex align-items-end mb-2">
+                                    <h4 class="card-title me-2 mb-0">{{ $rumah }}</h4>
+                                </div>
+                            </div>
+                            <div class="card-icon">
+                                <span class="badge bg-label-primary rounded p-2">
+                                    <i class="bx bx-home bx-sm"></i>
+                                </span>
                             </div>
                         </div>
                     </div>
@@ -28,15 +203,50 @@
             </div>
         </div>
 
+        <div class="mb-3">
+            <a type="button" href="{{ route('hrd.addPegawaiView') }}" class="btn btn-primary">
+                <span class="tf-icons bx bxs-user-plus"></span>&nbsp; Tambah Pegawai
+            </a>
+            <a type="button" href="#" class="btn btn-success">
+                <span class="tf-icons bx bxs-user-plus"></span>&nbsp; Export to Excel
+            </a>
+            <a type="button" href="#" class="btn btn-info">
+                <span class="tf-icons bx bxs-user-plus"></span>&nbsp; Generate ID Card
+            </a>
+            <a type="button" href="#" class="btn btn-secondary">
+                <span class="tf-icons bx bxs-user-plus"></span>&nbsp; Select Generate ID Card
+            </a>
+        </div>
+        @if (session('error'))
+        <div class="alert alert-danger d-flex" role="alert">
+            <span class="badge badge-center rounded-pill border-label-danger bg-danger p-3 me-2"><i class="bx bx-error fs-6"></i></span>
+            <div class="d-flex flex-column ps-1">
+                <h6 class="alert-heading d-flex align-items-center fw-bold mb-1">Error!!</h6>
+                <span>{{ (session('error')) }}</span>
+            </div>
+        </div>
+        @elseif (session('success'))
+        <div class="alert alert-success d-flex" role="alert">
+            <span class="badge badge-center rounded-pill border-label-success bg-success p-3 me-2"><i class="bx bx-check fs-6"></i></span>
+            <div class="d-flex flex-column ps-1">
+                <h6 class="alert-heading d-flex align-items-center fw-bold mb-1">Success!!</h6>
+                <span>{{ (session('success')) }}</span>
+            </div>
+        </div>
+        @endif
         <div class="card">
             <div class="card-datatable table-responsive">
-                <table class="datatables-divisi table border-top" id="divisi-table">
+                <table class="datatables-pegawai table border-top" id="pegawai-table">
                     <thead>
                         <tr>
                             <th>No</th>
-                            <th>Nama Divisi</th>
-                            <th>Keterangan</th>
-                            <th>Actions</th>
+                            <th>Image</th>
+                            <th>NIP</th>
+                            <th>Nama</th>
+                            <th>Divisi</th>
+                            <th>Durasi Kerja</th>
+                            <th>Durasi Kontrak</th>
+                            <th>Action</th>
                         </tr>
                     </thead>
                     <tbody></tbody>
@@ -44,38 +254,6 @@
             </div>
         </div>
         <!--/ Permission Table -->
-
-        <!-- Modal -->
-        <div class="modal fade" id="divisiModal" tabindex="-1" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-simple">
-                <div class="modal-content p-3 p-md-5">
-                    <div class="modal-body">
-                        <button type="button" class="btn-close btn-pinned" data-bs-dismiss="modal" aria-label="Close"></button>
-                        <div class="text-center mb-4">
-                            <h3>Tambah Divisi Baru</h3>
-                            <p>Form tambah divisi.</p>
-                        </div>
-                        <form class="needs-validation" action="{{ route('hrd.addDivisi') }}" method="POST" id="add-divisi-form">
-                            @csrf
-                            <div class="col-12 mb-3">
-                                <label class="form-label" for="nama_divisi">Nama Divisi</label>
-                                <input type="text" id="nama_divisi" name="nama_divisi" class="form-control" placeholder="Nama Divisi" autofocus required />
-                            </div>
-                            <div class="col-12 mb-3">
-                                <label for="ket" class="form-label">Keterangan</label>
-                                <textarea class="form-control" id="ket" name="ket" rows="3" placeholder="Keterangan Divisi"></textarea>
-                            </div>
-                            <div class="col-12 text-center demo-vertical-spacing">
-                                <button type="submit" class="btn btn-primary me-sm-3 me-1">Save</button>
-                                <button type="reset" class="btn btn-label-secondary" data-bs-dismiss="modal" aria-label="Close">
-                                    Cancel
-                                </button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
 
 
     </div>
@@ -93,7 +271,6 @@
                 <a href="https://themeselection.com" target="_blank" class="footer-link fw-bolder">ThemeSelection</a>
             </div>
             <div>
-                <a href="https://themeselection.com/license/" class="footer-link me-4" target="_blx`ank">License</a>
                 <a href="https://themeselection.com/" target="_blank" class="footer-link me-4">More Themes</a>
 
                 <a href="https://themeselection.com/demo/sneat-bootstrap-html-admin-template/documentation/" target="_blank" class="footer-link me-4">Documentation</a>
@@ -107,16 +284,26 @@
     <div class="content-backdrop fade"></div>
 </div>
 <!-- Content wrapper -->
+@include('dashboard.hrd.temp.out-pegawai')
 @endsection
 
 @section('script')
 <script>
+    $('#alasan_keluar').hide();
+    $('#alasan').change(function() {
+        if ($(this).val() == 'Other') {
+            $('#alasan_keluar').show('slow');
+            $("#alasan_keluar").attr("required", true);
+        } else {
+            $('#alasan_keluar').hide('slow');
+        }
+    });
     toastr.options = {
         "closeButton": true,
         "debug": false,
         "newestOnTop": false,
         "progressBar": true,
-        "positionClass": "toast-top-right",
+        "positionClass": "toast-bottom-right",
         "preventDuplicates": true,
         "onclick": null,
         "showDuration": "300",
@@ -136,59 +323,91 @@
     });
 
     $(function() {
-        // ! ADD DIVISI
-        $('#add-divisi-form').submit(function(e) {
-            e.preventDefault();
-            var form = this;
-            $.ajax({
-                url: $(form).attr('action'),
-                method: $(form).attr('method'),
-                data: new FormData(form),
-                processData: false,
-                dataType: 'JSON',
-                contentType: false,
-                beforeSend: function() {
-                    $('#add-divisi-form button[type="submit"]').html('<i class="fa fa-spinner fa-spin"></i>');
-                },
-                success: function(data) {
-                    if (data.code == 0) {
-                        $.each(data.error, function(prefix, val) {
-                            $(form).find('span.' + prefix + '_error').text(val[0]);
-                        });
-                    } else {
-                        $(form)[0].reset();
-                        // alert(data.msg);
-                        $('#divisiModal').modal('hide');
-                        $('#divisi-table').DataTable().ajax.reload(null, false);
-                        $('#add-divisi-form button[type="submit"]').html('Save');
-                        // show toastr with animation
-                        toastr.success(data.msg, 'Success!');
-                    }
-                }
-            })
-        });
 
-        // ! GET DIVISI
-        var table = $('.datatables-divisi')
+        // ! GET PEGAWAI
+        var table = $('.datatables-pegawai')
 
         if (table.length) {
             dt_divisi = table.DataTable({
-                ajax: '{{ route("hrd.getDivisi") }}',
+                ajax: '{{ route("hrd.getPegawaiAktif") }}',
                 columns: [
                     // columns according to JSON
                     {
                         data: 'DT_RowIndex',
                         name: 'DT_RowIndex',
+                    },
+                    {
+                        data: 'image',
+                        name: 'image',
+                        render: function(data, type, row, meta) {
+                            if (data == null) {
+                                return '<div class="avatar avatar-sm me-2"><img src="{{ asset("assets/img/avatars/1.png") }}" alt="Avatar" class="rounded-circle" /></div>';
+                            } else {
+                                return '<div class="avatar avatar-sm me-2"><img src="{{ asset("storage/") }}/' + data + '" alt="Avatar" class="rounded-circle"></div>';
+                            }
+                        }
+                    },
+                    {
+                        data: 'nip',
+                        name: 'nip',
 
                     },
                     {
-                        data: 'nama_divisi',
-                        name: 'nama_divisi',
-
+                        data: 'name',
+                        name: 'name',
                     },
                     {
-                        data: 'ket',
-                        name: 'ket',
+                        data: 'divisi.nama_divisi',
+                        name: 'divisi.nama_divisi',
+                    },
+                    {
+                        data: 'tgl_masuk',
+                        name: 'tgl_masuk',
+                        render: function(data, type, row) {
+                            var tgl_masuk = new Date(row.tgl_masuk);
+                            var tgl_skrg = new Date();
+                            var lama_durasi = Math.floor((tgl_skrg - tgl_masuk) / (1000 * 60 * 60 * 24));
+
+                            // ubah lama_durasi menjadi tahun, bulan, hari, 
+                            var tahun = Math.floor(lama_durasi / 365);
+                            var bulan = Math.floor((lama_durasi % 365) / 30);
+                            var hari = Math.floor((lama_durasi % 365) % 30);
+
+                            if (tahun > 0) {
+                                return tahun + ' tahun ' + bulan + ' bulan ' + hari + ' hari';
+                            } else if (bulan > 0) {
+                                return bulan + ' bulan ' + hari + ' hari';
+                            } else {
+                                return hari + ' hari';
+                            }
+                        }
+                    },
+                    {
+                        data: 'status_pegawai',
+                        name: 'status_pegawai',
+                        // hitung durasi kontrak
+                        render: function(data, type, row) {
+                            var tgl_akhir_kontrak = new Date(row.tgl_akhir_kontrak);
+                            var tgl_skrg = new Date();
+                            var lama_durasi = Math.floor((tgl_akhir_kontrak - tgl_skrg) / (1000 * 60 * 60 * 24));
+
+                            // ubah lama_durasi menjadi tahun, bulan, hari,
+                            var tahun = Math.floor(lama_durasi / 365);
+                            var bulan = Math.floor((lama_durasi % 365) / 30);
+                            var hari = Math.floor((lama_durasi % 365) % 30);
+
+                            if (data == 'Kontrak') {
+                                if (tahun > 0) {
+                                    return tahun + ' tahun ' + bulan + ' bulan ' + hari + ' hari';
+                                } else if (bulan > 0) {
+                                    return bulan + ' bulan ' + hari + ' hari';
+                                } else {
+                                    return hari + ' hari';
+                                }
+                            } else {
+                                return '<span class="badge bg-primary">' + data + '</span>'
+                            }
+                        }
                     },
                     {
                         data: 'actions',
@@ -196,54 +415,12 @@
                     }
                 ],
 
-                dom: '<"row mx-1"' +
-                    '<"col-sm-12 col-md-3" l>' +
-                    '<"col-sm-12 col-md-9"<"dt-action-buttons text-xl-end text-lg-start text-md-end text-start d-flex align-items-center justify-content-md-end justify-content-center flex-wrap me-1"<"me-3"f>B>>' +
-                    '>t' +
-                    '<"row mx-2"' +
-                    '<"col-sm-12 col-md-6"i>' +
-                    '<"col-sm-12 col-md-6"p>' +
-                    '>',
-                language: {
-                    sLengthMenu: '_MENU_',
-                    search: 'Search',
-                    searchPlaceholder: 'Search..'
-                },
-                // Buttons with Dropdown
-                buttons: [{
-                    text: 'Tambah Divisi',
-                    className: 'add-new btn btn-primary mb-3 mb-md-0',
-                    attr: {
-                        'data-bs-toggle': 'modal',
-                        'data-bs-target': '#divisiModal'
-                    },
-                    init: function(api, node, config) {
-                        $(node).removeClass('btn-secondary');
-                    }
-                }],
+
             });
         }
 
-        // ! DETAIL DIVISI
-        $(document).on('click', '#editDivisi', function() {
-            var divisi_id = $(this).data('id');
-            // alert(divisi_id);
-            $('.editDivisi').find('form')[0].reset();
-            $('.editDivisi').find('span.error-text').text('');
-            $.post('<?= route('hrd.detailDivisi') ?>', {
-                divisi_id: divisi_id
-            }, function(data) {
-                // alert(data.details.nama_divisi);
-                $('.editDivisi').find('input[name="id"]').val(data.details.id);
-                $('.editDivisi').find('input[name="nama_divisi"]').val(data.details
-                    .nama_divisi);
-                $('.editDivisi').find('textarea[name="ket"]').val(data.details.ket);
-                $('.editDivisi').modal('show');
-            }, 'json');
-        });
-
-        // ! UPDATE DIVISI
-        $('#edit-divisi-form').on('submit', function(e) {
+        // ! KELUAR PEGAWAI
+        $('#out-pegawai-form').on('submit', function(e) {
             e.preventDefault();
             var form = this;
             $.ajax({
@@ -254,7 +431,7 @@
                 dataType: 'json',
                 contentType: false,
                 beforeSend: function() {
-                    $('#edit-divisi-form button[type="submit"]').html('<i class="fa fa-spinner fa-spin"></i>');
+                    $(form).find('span.error-text').text('');
                 },
                 success: function(data) {
                     if (data.code == 0) {
@@ -262,15 +439,66 @@
                             $(form).find('span.' + prefix + '_error').text(val[0]);
                         });
                     } else {
-                        $('#divisi-table').DataTable().ajax.reload(null, false);
-                        $('#edit-divisi-form button[type="submit"]').html('Save');
-                        $('.editDivisi').modal('hide');
-                        $('.editDivisi').find('form')[0].reset();
+                        $('#pegawai-table').DataTable().ajax.reload(null, false);
+                        $('.outPegawai').modal('hide');
+                        $('.outPegawai').find('form')[0].reset();
+                        toastr.success(data.msg);
+                    }
+                }
+            });
+        });
+
+        // ! KELUARKAN PEGAWAI
+        $('#out-pegawai-form').on('submit', function(e) {
+            e.preventDefault();
+            var form = this;
+            $.ajax({
+                url: $(form).attr('action'),
+                method: $(form).attr('method'),
+                data: new FormData(form),
+                processData: false,
+                dataType: 'json',
+                contentType: false,
+                beforeSend: function() {
+                    $('#out-pegawai-form button[type="submit"]').html('<i class="fa fa-spinner fa-spin"></i>');
+                },
+                success: function(data) {
+                    if (data.code == 0) {
+                        $.each(data.error, function(prefix, val) {
+                            $(form).find('span.' + prefix + '_error').text(val[0]);
+                        });
+                    } else {
+                        $('#pegawai-table').DataTable().ajax.reload(null, false);
+                        $('#out-pegawai-form button[type="submit"]').html('Save');
+                        $('.outPegawai').modal('hide');
+                        $('.outPegawai').find('form')[0].reset();
                         toastr.success(data.msg, 'Success!');
                     }
                 }
             });
         });
+
+        // ! DETAIL OUT PEGAWAI
+        $(document).on('click', '#outPegawai', function() {
+            var pegawai_id = $(this).data('id');
+
+            $('.outPegawai').find('form')[0].reset();
+            $('.outPegawai').find('span.error-text').text('');
+            $.post('<?= route('hrd.detailPegawai') ?>', {
+                pegawai_id: pegawai_id
+            }, function(data) {
+                $('.outPegawai').find('input[name="id"]').val(data.details.id);
+                $('.outPegawai').find('table td[id="name"]').text(data.details.name);
+                $('.outPegawai').find('table td[id="divisi"]').text(data.details.divisi.nama_divisi);
+                $('.outPegawai').find('table td[id="jabatan"]').text(data.details.jabatan.nama_jabatan);
+                if (data.details.image == null) {
+                    $('.outPegawai').find('table td[id="image"]').html('<img src="<?= asset("assets/img/avatars/1.png") ?>" alt="Avatar" class="rounded-circle" />');
+                } else {
+                    $('.outPegawai').find('table td[id="image"]').html('<img src="{{ asset("storage/") }}/' + data.details.image + '" class="img-thumbnail" width="80%">');
+                }
+                $('.outPegawai').modal('show');
+            }, 'json');
+        })
 
         // Delete Record
         $('.datatables-permissions tbody').on('click', '.delete-record', function() {
@@ -284,59 +512,45 @@
             $('.dataTables_length .form-select').removeClass('form-select-sm');
         }, 300);
 
-        // ! DELETE DIVISI
-        $(document).on('click', '#deleteDivisi', function() {
-            var divisi_id = $(this).data('id');
-            var url = '<?= route("hrd.deleteDivisi") ?>';
+        // ! DELETE PEGAWAI
+        $(document).on('click', '#deletePegawai', function() {
+            var user_id = $(this).data('id');
+            // alert(user_id)
+            var url = '<?= route('hrd.deletePegawai') ?>';
 
             swal.fire({
                 title: 'Data akan dihapus?',
-                html: 'data divisi akan <b>dihapus</b>',
+                html: 'data pegawai akan <b>dihapus</b>',
                 showCancelButton: true,
                 showCloseButton: true,
                 cancelButtonText: 'Cancel',
                 confirmButtonText: 'Delete',
                 cancelButtonColor: '#d33',
                 confirmButtonColor: '#3085d6',
-                // width: '300px',
                 allowOutsideClick: false,
-                backdrop: false,
             }).then(function(result) {
                 if (result.value) {
                     $.post(url, {
-                        divisi_id: divisi_id
+                        user_id: user_id
                     }, function(data) {
                         if (data.code == 1) {
-                            $('#divisi-table').DataTable().ajax.reload(null, false);
-                            toastr.success(data.msg, 'Success!', {
-                                "showMethod": "fadeIn",
-                                "hideMethod": "fadeOut",
-
-                                "showEasing": "swing",
-                                "hideEasing": "linear",
-                                "showMethod": "fadeIn",
-                                "hideMethod": "fadeOut",
-                                "progressBar": true
-                            });
+                            $('#pegawai-table').DataTable().ajax.reload(null, false);
+                            toastr.success(data.msg);
                         } else {
-                            toastr.error(data.msg, 'Error!', {
-                                "showMethod": "fadeIn",
-                                "hideMethod": "fadeOut",
-
-                                "showEasing": "swing",
-                                "hideEasing": "linear",
-                                "showMethod": "fadeIn",
-                                "hideMethod": "fadeOut",
-                                "progressBar": true
-                            });
+                            toastr.error(data.msg);
                         }
                     }, 'json');
                 }
             });
         })
 
-
-
     });
+
+    // hide alert after 3 seconds
+    window.setTimeout(function() {
+        $(".alert").fadeTo(500, 0).slideUp(500, function() {
+            $(this).remove();
+        });
+    }, 3000);
 </script>
 @endsection

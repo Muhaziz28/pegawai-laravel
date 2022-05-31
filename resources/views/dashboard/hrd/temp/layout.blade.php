@@ -44,7 +44,11 @@
     <link rel="stylesheet" href="{{ asset('assets/vendor/libs/datatables-responsive-bs5/responsive.bootstrap5.css') }}" />
     <link rel="stylesheet" href="{{ asset('assets/vendor/libs/datatables-buttons-bs5/buttons.bootstrap5.css') }}" />
     <link rel="stylesheet" href="{{ asset('assets/vendor/libs/formvalidation/dist/css/formValidation.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assets/vendor/libs/flatpickr/flatpickr.cs') }}s" />
+    <link rel="stylesheet" href="{{ asset('assets/vendor/libs/jquery-timepicker/jquery-timepicker.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assets/vendor/libs/pickr/pickr-themes.css') }}" />
 
+    <!-- <link rel="stylesheet" href="{{ asset('css/dataTables.listView.css') }}"> -->
     <!-- Helpers -->
     <script src="{{ asset('assets/vendor/js/template-customizer.js') }}"></script>
     <script src="{{ asset('assets/vendor/js/helpers.js') }}"></script>
@@ -82,26 +86,82 @@
                         </a>
                     </li>
 
+
                     <li class="menu-header small text-uppercase"><span class="menu-header-text">Main</span></li>
-                    <li class="menu-item {{ request()->is('hrd/pegawaiAktif') ? 'open active' : '' }}">
+                    <li class="menu-item 
+                    {{ request()->is('hrd/pegawaiAktif') || request()->is('hrd/addPegawaiView') || request()->is('hrd/pegawaiOut') ? 'open active' : '' 
+                    }}">
                         <a href="javascript:void(0);" class="menu-link menu-toggle">
                             <i class="menu-icon tf-icons bx bxs-user-account"></i>
                             <div data-i18n="Datatables">Pegawai</div>
                         </a>
                         <ul class="menu-sub">
-                            <li class="menu-item {{ request()->is('hrd/pegawaiAktif') ? 'active' : '' }}">
+                            <li class="menu-item {{ request()->is('hrd/pegawaiAktif') || request()->is('hrd/addPegawaiView') ? 'active' : '' }}">
                                 <a href="{{ route('hrd.pegawaiAktif') }}" class="menu-link">
                                     <div data-i18n="Basic">Data Pegawai Aktif</div>
                                 </a>
                             </li>
-                            <li class="menu-item">
-                                <a href="tables-datatables-advanced.html" class="menu-link">
+                            <li class="menu-item {{ request()->is('hrd/pegawaiOut') ? 'active' : '' }}">
+                                <a href="{{ route('hrd.pegawaiOut') }}" class="menu-link">
                                     <div data-i18n="Advanced">Data Pegawai Keluar</div>
                                 </a>
                             </li>
                         </ul>
                     </li>
 
+                    <li class="menu-item {{ request()->is('hrd/aktivitas') || request()->is('hrd/aktivitasPegawai') || request()->is('hrd/rekapAktivitas') ? 'open active' : '' 
+                    }}">
+                        <a href="javascript:void(0);" class="menu-link menu-toggle">
+                            <i class="menu-icon tf-icons bx bx-calendar-edit"></i>
+                            <div data-i18n="Datatables">Aktivitas Pegawai</div>
+                        </a>
+                        <ul class="menu-sub">
+                            <li class="menu-item {{ request()->is('hrd/aktivitas') ? 'active' : '' }}">
+                                <a href="{{ route('hrd.aktivitas') }}" class="menu-link">
+                                    <div data-i18n="Basic">Data Aktivitas</div>
+                                </a>
+                            </li>
+                            <li class="menu-item {{ request()->is('hrd/aktivitasPegawai') ? 'active' : '' }}">
+                                <a href="{{ route('hrd.aktivitasPegawai') }}" class="menu-link">
+                                    <div data-i18n="Advanced">Data Aktivitas Pegawai</div>
+                                </a>
+                            </li>
+                            <li class="menu-item {{ request()->is('hrd/rekapAktivitas') ? 'active' : '' }}">
+                                <a href="{{ route('hrd.rekapAktivitas') }}" class="menu-link">
+                                    <div data-i18n="Advanced">Rekap Aktivitas Pegawai</div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="menu-item active open">
+                        <a href="javascript:void(0);" class="menu-link menu-toggle">
+                            <i class="menu-icon tf-icons bx bx-food-menu"></i>
+                            <div data-i18n="Invoice">Invoice</div>
+                        </a>
+                        <ul class="menu-sub">
+                            <li class="menu-item active">
+                                <a href="app-invoice-list.html" class="menu-link">
+                                    <div data-i18n="List">List</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="app-invoice-preview.html" class="menu-link">
+                                    <div data-i18n="Preview">Preview</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="app-invoice-edit.html" class="menu-link">
+                                    <div data-i18n="Edit">Edit</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="app-invoice-add.html" class="menu-link">
+                                    <div data-i18n="Add">Add</div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
                     <!-- Data -->
                     <li class="menu-header small text-uppercase"><span class="menu-header-text">Data</span></li>
                     <li class="menu-item {{ request()->is('hrd/divisi') ? 'active' : ''}}">
@@ -476,6 +536,11 @@
     <script src="{{ asset('assets/vendor/libs/formvalidation/dist/js/plugins/AutoFocus.min.js') }}"></script>
     <script src="{{ asset('assets/vendor/libs/select2/select2.js') }}"></script>
 
+    <script src="{{ asset('assets/vendor/libs/moment/moment.js') }}"></script>
+    <script src="{{ asset('assets/vendor/libs/moment/moment.js') }}"></script>
+    <script src="{{ asset('assets/vendor/libs/flatpickr/flatpickr.js') }}"></script>
+    <script src="{{ asset('assets/vendor/libs/jquery-timepicker/jquery-timepicker.js') }}"></script>
+    <script src="{{ asset('assets/vendor/libs/pickr/pickr.js') }}"></script>
     <!-- Main JS -->
     <script src="{{ asset('assets/js/main.js') }}"></script>
 
@@ -489,6 +554,9 @@
     <script src="{{ asset('assets/js/ui-toasts.js') }}"></script>
     <script src="{{ asset('assets/js/forms-selects.js') }}"></script>
     <script src="{{ asset('assets/js/tables-datatables-advanced.js') }}"></script>
+
+    <!-- list view datatables -->
+    <!-- <script src="{{ asset('js/dataTables.listView.js') }}"></script> -->
 
     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
         @csrf
